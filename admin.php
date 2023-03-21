@@ -83,8 +83,15 @@ if (!isset($_SESSION['user_id']) || $_SESSION['userstatus'] === 5) {
           echo "</tr>";
         }
         ?>
+
+<!-- here is a comfirmation button more or less for makingsure that before you finalise the action you select what you are doing --!>
       </table>
-      <input type="submit" value="Remove Selected Users">
+
+        <input type="submit" name="submit_update" value="Update User Status">
+        <input type="submit" name="submit_remove" value="Remove Selected Users">
+        <select name="action">
+            <option value="update">Update Status</option>
+            <option value="remove">Remove Users</option>
     </form>
   </main>
 </body>
