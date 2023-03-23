@@ -50,6 +50,7 @@ if (isset($_SESSION['userstatus']) && $_SESSION['userstatus'] == 5) {
     <a href="./table_booking.php">Book Table</a>
       <a href="./viewscore.php">Score Log</a>
     <a href="./display_booking.php">Active Bookings</a>
+    <a href="./picsofmini.php">Pics and Mini of the week</a>
     <a href="./displaybookingjs.php">Active Bookings 2nd view</a>
     <a href="./announcment.php">Announcement</a>
     <a href="./view_announc.php"> View Announcements</a>

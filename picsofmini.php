@@ -1,3 +1,7 @@
+<?php 
+include("./header.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +36,9 @@
 </head>
 <body>
 <div class="gallery">
-    <img src="image-1.jpg" alt="Image 1">
-    <img src="image-2.jpg" alt="Image 2">
-    <img src="image-3.jpg" alt="Image 3">
+    <img src="./pics of minitures/666 jambo/starwars.png" alt="Image 1">
+    <img src="pics of minitures/crow j simpson/received_679877240484658.jpg" alt="Image 2">
+    <img src="Logo/DGlogo3.jpg" alt="Image 3">
     <img src="image-4.jpg" alt="Image 4">
     <img src="image-5.jpg" alt="Image 5">
     <img src="image-6.jpg" alt="Image 6">
@@ -45,8 +49,10 @@
 </div>
 
 <div class="weekly-miniature">
-    <img src="image-1.jpg" alt="Miniature of the Week">
+    <img src="pics of minitures/crow j simpson/PXL_20230113_184651893.jpg" alt="Miniature of the Week">
 </div>
 </body>
 </html>
-
+<?php
+include("./footer.php");
+?>

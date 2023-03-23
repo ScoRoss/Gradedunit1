@@ -4,6 +4,7 @@ include("./connectdb.php");
 
 <?php
 session_start(); // start the session
+$_SESSION = array();
 
 // destroy the session
 
