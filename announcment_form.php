@@ -35,20 +35,24 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
     $announcement_image = null;
 }
 
+
 // Prepare and execute stored procedure
 $stmt = $db->prepare("INSERT INTO announcements (announcement_title, announcement_text, announcement_date, image, user_id) VALUES (:announcement_title, :announcement_text, :announcement_date, :announcement_image, :user_id)");
 $stmt->execute(array(
     ":announcement_title" => $announcement_title,
     ":announcement_text" => $announcement_text,
     ":announcement_date" => $announcement_date,
-    ":image" => $announcement_image,
+    ":announcement_image" => $announcement_image,
     ":user_id" => $user_id
 ));
+
+
+
 
 // Check if the insertion was successful
 if ($stmt->rowCount() > 0) {
     echo "Announcement submitted successfully!";
-    
+
 } else {
     echo "Error submitting announcement. Please try again later.";
 }
