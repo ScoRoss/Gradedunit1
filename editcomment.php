@@ -49,14 +49,14 @@ $user_status = $user['userstatus'];
     foreach ($comments as $comment) {
         $comment_id = $comment['comment_id'];
         $announcement_id = $comment['announcement_id'];
-        $user_id = $comment['user_id'];
+        $comment_user_id = $comment['user_id']; // Store the comment's user ID in a separate variable
         $comment_text = $comment['comment_text'];
         $comment_date = $comment['comment_date'];
         ?>
         <tr>
             <td><?php echo $comment_id; ?></td>
             <td><?php echo $announcement_id; ?></td>
-            <td><?php echo $user_id; ?></td>
+            <td><?php echo $comment_user_id; ?></td>
             <td>
                 <?php echo $comment_text; ?>
                 <div id="edit-box-<?php echo $comment_id; ?>" style="display:none;">
@@ -69,7 +69,7 @@ $user_status = $user['userstatus'];
             </td>
             <td><?php echo $comment_date; ?></td>
             <td>
-                <?php if($_SESSION['userstatus'] == 5) { ?>
+                <?php if($comment_user_id == $user_id) { ?> <!-- Check if the logged in user's ID matches the comment's user ID -->
                     <button onclick="showEditBox(<?php echo $comment_id; ?>)">Edit</button>
                 <?php } ?>
             </td>

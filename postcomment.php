@@ -2,8 +2,8 @@
 session_start();
 include("./connectdb.php");
 
-session_start();
-include("./connectdb.php");
+
+
 
 // Check if the form has been submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
