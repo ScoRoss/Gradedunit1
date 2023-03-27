@@ -54,6 +54,7 @@ if (isset($_SESSION['userstatus']) && $_SESSION['userstatus'] == 5) {
     <a href="./displaybookingjs.php">Active Bookings 2nd view</a>
     <a href="./announcment.php">Announcement</a>
     <a href="./view_announc.php"> View Announcements</a>
+      <a href="./editcomment.php"> edit comment</a>
     <?php echo $admin_link; ?>
     <a href="./login.php">Login</a>
     <a href="./Logout.php">Logout</a>
