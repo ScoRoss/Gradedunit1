@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("./connectdb.php");
 
 // Get the comment ID and updated comment text from the form submission
@@ -14,7 +15,7 @@ $user_id = $comment['user_id'];
 
 // Check if the user ID associated with the comment matches the user ID of the current session
 if ($_SESSION['user_id'] == $user_id) {
-    // Update the comment in the database
+    // Prepare and execute the update statement
     $stmt = $db->prepare("UPDATE comments SET comment_text = :comment_text WHERE comment_id = :comment_id");
     $stmt->bindParam(':comment_text', $comment_text);
     $stmt->bindParam(':comment_id', $comment_id);

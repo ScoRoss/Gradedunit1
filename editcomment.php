@@ -26,6 +26,10 @@ $user_status = $user['userstatus'];
 </head>
 <body>
 <h1>Comments</h1>
+<?php var_dump($user_id);
+var_dump($_SESSION['user_id']);
+?>
+
 <table>
     <thead>
     <tr>
@@ -74,10 +78,12 @@ $user_status = $user['userstatus'];
                 <?php } ?>
             </td>
             <td>
-                <form method="POST" action="./deletecomment.php">
-                    <input type="hidden" name="comment_id" value="<?php echo $comment_id; ?>">
-                    <input type="submit" value="Delete">
-                </form>
+                <?php if($comment_user_id == $user_id) { ?> <!-- Check if the logged in user's ID matches the comment's user ID -->
+                    <form method="POST" action="./deletecomment.php">
+                        <input type="hidden" name="comment_id" value="<?php echo $comment_id; ?>">
+                        <input type="submit" value="Delete">
+                    </form>
+                <?php } ?>
             </td>
         </tr>
         <?php
