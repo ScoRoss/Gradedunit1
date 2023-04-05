@@ -14,7 +14,7 @@ $user_status = $user['userstatus'];
 
 // Check if user is an admin
 if ($user_status < 5) {
-    header('Location: ./DumfriesG.php');
+    header('Location: ./indexindex.php');
     exit;
 }
 
