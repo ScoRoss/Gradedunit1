@@ -11,6 +11,6 @@ session_start(); // start the session
 session_destroy();
 
 // redirect to the home page
-header("Location: ./indexindex.php");
+header("Location: ./DumfriesG.php");
 exit();
 ?>

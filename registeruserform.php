@@ -54,5 +54,5 @@ this is a test';
 $mail->send();
 
 // Redirect the user to the homepage
-header("Location: ./indexindex.php");
+header("Location: ./DumfriesG.php");
 ?>
