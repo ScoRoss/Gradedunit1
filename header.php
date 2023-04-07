@@ -43,7 +43,7 @@ if (isset($_SESSION['userstatus']) && $_SESSION['userstatus'] == 5) {
 
 <header>
     <nav>
-        <a href="./DumfriesG.php">Home</a>
+        <a href="index.php">Home</a>
         <a href="./aboutus.php">About Us</a>
         <a href="./registeruser.php">Membership</a>
         <a href="./paymembership.php">Pay Membership</a>

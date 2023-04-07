@@ -38,7 +38,7 @@ $stmt->execute(array(
 ));
 
 // Redirect to table_booking.php
-header("Location: ./DumfriesG.php");
+header("Location: ./index.php");
 exit();
 
 // Check if the update was successful
