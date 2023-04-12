@@ -8,8 +8,8 @@ include("./connectdb.php");
 session_start();
 
 // Check if user is logged in and has status of 5
-if (!isset($_SESSION['user_id']) || $_SESSION['userstatus'] === 5) {
-  header("Location: ./admin.php");
+if (!isset($_SESSION['user_id']) || $_SESSION['userstatus'] != 5) {
+  header("Location: ./index.php");
   exit();
 }
 ?>
